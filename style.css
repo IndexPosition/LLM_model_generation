@@ -375,6 +375,37 @@ img {
     color: var(--first-color);
 }
 
+.services__container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+  }
+  
+  .service {
+     /* Creates clean card-like effect */
+    border: 1px solid #eee; /* Subtle border */
+    border-radius: 0.5rem;
+    padding: 2rem;  /* More generous inner spacing */
+    box-shadow:  0 2px 5px rgba(0,0,0, 0.08); /* Soft shadow definition */
+  }
+  
+  .service__title { 
+    color: var(--first-color);/* Darker heading color */
+    margin-bottom: 1.25rem;
+  }
+  
+  .service__description {
+    margin-bottom: 1.5rem;
+  }
+  
+  .service__detail, .service__use-case { 
+    margin-top: 1rem; 
+  }
+
+  .services__intro {
+    margin-bottom: 2rem; /* Space between the intro and the first service */
+  }
+  
+
 .skills {
     background-color: var(--container-color);
 }
