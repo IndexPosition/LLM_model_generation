@@ -1,38 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Company</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/script.js"></script>
+  <title>Abhijith Prakash - PORTFOLIO</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/alien-invader.png">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">InveBiz</a>
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#hero" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#about" class="nav__link">About</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#works" class="nav__link">Careers</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link">Services</a>
-                </li>
-                <li class="nav__item">
-                    <label for="day-night" class="switcher__toggle nav__link">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-moon"></i>
-                    </label>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <navbar>
-        
+  <input type="checkbox" id="day-night" />
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">4BH1J17H</a>
+      <input type="checkbox" id="nav-toggler" />
+      <label for="nav-toggler" class="nav__toggle">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#about" class="nav__link">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="#works" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+        <li class="nav__item">
+          <label for="day-night" class="switcher__toggle nav__link">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <div class="home__content">
+          <span class="home__small">Hi,</span>
+          <h1 class="home__title">
+            <span>I'm</span> Abhijith <br />
+            <span>a </span><a id="glitched-text"></a>
+          </h1>
+          <div class="home__btns">
+            <a href="#contact" class="btn">./Initiate Collaboration</a>
+            <a href="#works" class="btn btn--transparent">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+        <div class="about__img-wrapper">
+          <img src="assets/img/profile.jpg" alt="Abhijith Prakash" class="about__img" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__title" data-title="Who am I?">
+            My name is Abhijith Prakash, <br />a self-proclaimed computernaut
+          </h2>
+          <p class="about__description">
+            I am a Computer Science Engineering undergraduate at
+            <span>Amrita Vishwa Vidyapeetham</span> in Chennai.
+            <br />
+            Computers have always fascinated me, and I like exploring codes,
+            and building random projects.
+          </p>
+          <ul class="about__data grid">
+            <li class="data__item">
+              <h3 class="data__title">Name:</h3>
+              <span class="data__description">Abhijith Prakash</span>
+            </li>
+            <li class="data__item">
+              <h3 class="data__title">Age:</h3>
+              <span class="data__description" id="age"></span>
+            </li>
+            <li class="data__item">
+              <h3 class="data__title">From:</h3>
+              <span class="data__description">New Delhi, India</span>
+            </li>
+            <li class="data__item">
+              <h3 class="data__title">Email:</h3>
+              <span class="data__description about__link" id="copy_text" onclick="copyMail()">me@abhijithprakash.me</span>
+            </li>
+          </ul>
+          <div class="about__bottom">
+            <a href="" class="btn" download>Parse my CV!</a>
+            <div class="about__social-links">
+              <a href="https://linkedin.com/in/abhijithprakash2003/" target="_blank" class="about__social-link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/IndexPosition" target="_blank" class="about__social-link">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://instagram.com/bluehostile" target="_blank" class="about__social-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills section">
+      <h2 class="section__title title-center" data-title="My Talent">
+        Professional Skills
+      </h2>
+      <div class="skills__container container grid">
+        <div class="skills__item">
+          <img src="assets/img/language_icons/C.png" alt="C" class="skills__img">
+          <h3 class="skills__name">C</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/Cpp.png" alt="c++" class="skills__img">
+          <h3 class="skills__name">C++</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/CSS3.png" alt="css3" class="skills__img">
+          <h3 class="skills__name">CSS</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/JavaScript.png" alt="javascript" class="skills__img">
+          <h3 class="skills__name">JavaScript</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/HTML5.png" alt="html5" class="skills__img">
+          <h3 class="skills__name">HTML5</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/java.png" alt="Java" class="skills__img">
+          <h3 class="skills__name">Java</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/Python.png" alt="Python" class="skills__img">
+          <h3 class="skills__name">Python</h3>
+        </div>
+        <div class="skills__item">
+          <img src="assets/img/language_icons/Ruby.png" alt="Ruby" class="skills__img">
+          <h3 class="skills__name">Ruby</h3>
+        </div>
+
+        <div class="skills__item">
+          <img src="assets/img/language_icons/MySQL.png" alt="MySQL" class="skills__img">
+          <h3 class="skills__name">MySQL</h3>
+        </div>
+      </div>
+    </section>
+    <section class="works section" id="works">
+      <h2 class="section__title title-center" data-title="My Portfolio">
+        Recent Works
+      </h2>
+      <p>All my projects are available on my GitHub profile. <br>
+        Feel free to explore them if you are interested.</p>
+      <a href="https://github.com/IndexPosition/futbol_ui" target="_blank">
+        <div class="work__container container grid">
+          <div class="work__card">
+            <img src="assets/img/project-img-1.jpg" alt="" class="work__img" />
+            <div class="work__details">
+              <h3 class="work__title">Futbol UI</h3>
+              <span class="work__description">UI/UX for online football store</span>
+            </div>
+          </div>
+      </a>
+      <a href="https://github.com/IndexPosition/hopeharbour" target="_blank">
+        <div class="work__card">
+          <img src="assets/img/project-img-2.jpg" alt="" class="work__img" />
+          <div class="work__details">
+            <h3 class="work__title">Hope Harbour</h3>
+            <span class="work__description">The Harbour for the people in need</span>
+          </div>
+        </div>
+      </a>
+      <a href="" target="_blank">
+        <div class="work__card">
+          <img src="assets/img/null-project.jpg" alt="" class="work__img" />
+          <div class="work__details">
+            <h3 class="work__title">Null</h3>
+            <span class="work__description">Coming Soon</span>
+          </div>
+        </div>
+      </a>
+      
+      </div>
+    </section>
+    <section class="contact section" id="contact">
+      <h2 class="section__title title-center" data-title="Get in touch">
+        Contact Me
+      </h2>
+      <div class="contact__container container grid">
+        <div class="contact__deatails">
+          <div class="contact__item">
+            <i class="fa-solid fa-envelope contact__icon"></i>
+            <div>
+              <h3 class="contact__title">Mail Me</h3>
+              <span class="contact__data" id="copy_text" onclick="copyMail()">me@abhijithprakash.me</span>
+            </div>
+          </div>
+        </div>
+        <form action="https://formsubmit.co/me@abhijithprakash.me" method="POST" class="contact__form">
+          <div class="form__group">
+            <div class="form__input">
+              <input type="text" placeholder="Name" class="input__control" name="name"/>
+            </div>
+            <div class="form__input">
+              <input type="email" placeholder="Email" class="input__control" required name="email"/>
+            </div>
+          </div>
+          <div class="form__input">
+            <input type="text" placeholder="Subject" class="input__control" name="subject"/>
+          </div>
+          <div class="form__input">
+            <textarea name="message" id="" placeholder="Message" cols="30" rows="10"
+              class="input__control textarea"></textarea>
+          </div>
+          <button class="btn contact__btn">Send Message</button>
+          <input type="hidden" name="_next" value="https://abhijithprakash.me/">
+          <input type="hidden" name="_captcha" value="false">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <p class="footer__text">Made in Uranus.</p>
+      <div class="footer__social-links">
+        <a href="https://linkedin.com/in/abhijithprakash2003/" target="_blank" class="footer__social-link">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/IndexPosition" target="_blank" class="footer__social-link">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://instagram.com/bluehostile" target="_blank" class="footer__social-link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
