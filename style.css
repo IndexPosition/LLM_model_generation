@@ -276,9 +276,11 @@ img {
 }
 
 .about__container {
-    grid-template-columns: 4fr 8fr;
-    align-items: center;
-}
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 3rem;
+  }
+  
 
 .about__img-wrapper {
     position: relative;
